@@ -1,3 +1,49 @@
 .footer {
   min-height: calc(100vh - (90px + 200px));
 }
+.glass {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.11);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: blur(2px); */
+  /* -webkit-backdrop-filter: blur(2px); */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+select {
+  border: 1px solid white;
+  outline: none;
+  border-radius: 5px;
+  height: 30px;
+}
+.slidertextbg {
+  /* From https://css.glass */
+  background: rgba(48, 22, 22, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(48, 22, 22, 0.3);
+}
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circularmotion {
+  animation: rotate360 infinite 5s linear;
+  cursor: pointer;
+}
+.circularmotion:hover {
+  animation-play-state: paused;
+}

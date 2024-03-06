@@ -12,9 +12,6 @@ const Admin = (props: Props) => {
   return (
     <div>
       <AdminLayout>
-        {/* {count}
-        <button onClick={increment}>Increment</button>
-        <button onClick={decrement}>Decrement</button> */}
         <Routes>
           <Route path="/" element={<AdminHome />} />
           <Route path="/vehicles" element={<AdminVehicles />} />
