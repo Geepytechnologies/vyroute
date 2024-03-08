@@ -78,7 +78,7 @@ const Myslider = (props: Props) => {
 
   return (
     <>
-      <button onClick={() => slide("left")} className="">
+      {/* <button onClick={() => slide("left")} className="">
         left
       </button>
       <button onClick={() => slide("right")}>right</button>
@@ -86,7 +86,7 @@ const Myslider = (props: Props) => {
         <Card />
         <Card />
         <Card />
-      </div>
+      </div> */}
     </>
   );
 };

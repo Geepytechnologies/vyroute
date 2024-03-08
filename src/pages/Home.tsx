@@ -31,7 +31,7 @@ const Home = (props: Props) => {
         <Hero />
         <Values />
         <OurRoutes />
-        <Mapcomponent />
+        {/* <Mapcomponent /> */}
       </BasicLayout>
     </div>
   );

@@ -8,7 +8,7 @@ type Props = {};
 const Values = (props: Props) => {
   return (
     <div>
-      <div className="flex items-center py-6 pl-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center items-center py-6 pl-4 gap-4">
         <div className="flex flex-col items-center">
           <div className="bg-[#6ba4b8] h-[60px] w-[60px] flex items-center justify-center rounded-full">
             <FaRoadCircleCheck className="text-[50px] text-primary" />

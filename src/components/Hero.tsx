@@ -271,14 +271,14 @@ const Hero = (props: Props) => {
   return (
     <div className="relative bg-[url('/roadview.jpg')] h-[500px] bg-cover  ">
       <div className="absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.4)]"></div>
-      <div className="absolute top-0 left-0 h-full w-full flex flex-col md:flex-row items-center">
-        <div>
-          <h1 className="text-white font-popp text-5xl font-[500]">
+      <div className="absolute top-0 left-0 h-full w-full pt-6 p-3 gap-4 flex flex-col md:flex-row md:items-center items-start">
+        <div className="">
+          <h1 className="text-white font-popp text-4xl md:text-5xl font-[500]">
             {appdetails.slogan}
           </h1>
-          <h2 className="text-white text-xl">{appdetails.subSlogan}</h2>
+          <h2 className="text-white text-x">{appdetails.subSlogan}</h2>
         </div>
-        <div className="w-full flex items-center justify-center ">
+        <div className="w-full flex items-center justify-start md:justify-center ">
           <div className="glass w-[90%] md:w-[70%] lg:w-[80%] h-auto min-h-[300px]">
             <div className="flex items-center py-4 rounded-t-[16px] pl-4 gap-4 text-white text-[12px]  font-open">
               <button
