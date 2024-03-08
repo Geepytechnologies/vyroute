@@ -74,7 +74,7 @@ const Select = (props: Props) => {
   };
   const validatefields = () => {
     if (
-      bookingformone.adults == "" ||
+      bookingformone.adults == null ||
       bookingformone.date == "" ||
       bookingformone.from == "" ||
       bookingformone.to == ""
@@ -114,13 +114,18 @@ const Select = (props: Props) => {
       });
     }
     if (!bookedSeats.has(numberToCheck)) {
-      setSeatmanager((prevSeatmanager) => ({
-        ...prevSeatmanager,
-        [numberToCheck]: !prevSeatmanager[numberToCheck],
-      }));
-      setBookedSeats((prev) => new Set(prev).add(numberToCheck));
+      if (bookedSeats.size == bookingformone.adults) {
+        alert(`You can't choose more than ${bookingformone.adults} seat(s)`);
+      } else {
+        setSeatmanager((prevSeatmanager) => ({
+          ...prevSeatmanager,
+          [numberToCheck]: !prevSeatmanager[numberToCheck],
+        }));
+        setBookedSeats((prev) => new Set(prev).add(numberToCheck));
+      }
     }
   };
+
   const handlemodal = () => {
     setTogglemodal(false);
     bookedSeats.clear();

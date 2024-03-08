@@ -30,7 +30,7 @@ const Hero = (props: Props) => {
     from: "",
     to: "",
     date: bookingformone.date,
-    adults: "1",
+    adults: 1,
   });
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {

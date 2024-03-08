@@ -1,6 +1,9 @@
 .footer {
   min-height: calc(100vh - (90px + 200px));
 }
+input {
+  outline: none;
+}
 .glass {
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.11);

@@ -14,7 +14,7 @@ interface Bookingformone {
   from: string;
   to: string;
   date: string;
-  adults: string;
+  adults: number;
 }
 interface Bookingformtwo {
   from: string;
@@ -53,7 +53,7 @@ const useStore = create<MyState>((set) => ({
     from: "",
     to: "",
     date: date,
-    adults: "1",
+    adults: 1,
   },
   bookingformtwo: {
     from: "",
