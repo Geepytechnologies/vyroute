@@ -2,6 +2,7 @@ import React from "react";
 import { GiSteeringWheel } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { MdEventSeat } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
@@ -18,6 +19,7 @@ type SeatmodalProps = {
 };
 
 const Seatmodal = (props: SeatmodalProps) => {
+  const navigate = useNavigate();
   const {
     togglemodal,
     handlemodal,
@@ -25,6 +27,9 @@ const Seatmodal = (props: SeatmodalProps) => {
     setSeatmanager,
     handleselectseat,
   } = props;
+  const handleSubmit = () => {
+    navigate("/login", { replace: true });
+  };
   return (
     <div className="w-full bg-[rgba(0,0,0,0.4)] min-h-screen fixed flex items-center justify-center">
       <div className="bg-white h-[500px] overflow-y-scroll p-4 flex flex-col gap-4 rounded-md w-[90%] md:w-[70%] lg:w-[30%]">
@@ -333,7 +338,10 @@ const Seatmodal = (props: SeatmodalProps) => {
           </div>
         </div>
         {/* continue */}
-        <button className="bg-secondary px-5 py-2 rounded-md text-white font-[500]">
+        <button
+          onClick={handleSubmit}
+          className="bg-secondary px-5 py-2 rounded-md text-white font-[500]"
+        >
           Continue
         </button>
       </div>
